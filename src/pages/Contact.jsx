@@ -58,7 +58,7 @@ function ContactItem({ icon, label, value, link }) {
             {value}
           </a>
         ) : (
-          <p className="text-base sm:text-lg">{value}</p>
+          <p className="text-xs sm:text-lg">{value}</p>
         )}
       </div>
     </div>
