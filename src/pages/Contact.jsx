@@ -53,7 +53,7 @@ function ContactItem({ icon, label, value, link }) {
             href={link}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-base sm:text-lg hover:text-slate-500 transition"
+            className="text-xs sm:text-lg hover:text-slate-500 transition"
           >
             {value}
           </a>

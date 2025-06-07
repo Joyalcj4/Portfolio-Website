@@ -34,7 +34,7 @@ const RadialMenu = ({ onSelect }) => {
       className={`radial-segment wheel-gradient group absolute ${segmentStyle}`}
     >
       <div className="flex flex-col items-center">
-        <span className="radial-label text-xl group-hover:text-2xl group-hover:text-white">{label}</span>
+        <span className="radial-label text-sm sm:text-lg md:text-xl sm:group-hover:text-2xl sm:group-hover:text-white">{label}</span>
         <span className='opacity-0  text-white group-hover:opacity-100 '>{quote}</span>
 
         <div className="radial-tooltip">
