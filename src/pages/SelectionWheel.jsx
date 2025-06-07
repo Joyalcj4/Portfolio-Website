@@ -34,11 +34,11 @@ const RadialMenu = ({ onSelect }) => {
       className={`radial-segment wheel-gradient group absolute ${segmentStyle}`}
     >
       <div className="flex flex-col items-center">
-        <span className="radial-label text-sm sm:text-lg md:text-xl sm:group-hover:text-2xl sm:group-hover:text-white">{label}</span>
-        <span className='opacity-0  text-white group-hover:opacity-100 '>{quote}</span>
+        <span className="radial-label text-xs sm:text-lg md:text-xl sm:group-hover:text-2xl sm:group-hover:text-white">{label}</span>
+        <span className='opacity-0 text-xs sm:text-base text-white group-hover:opacity-100 '>{quote}</span>
 
         <div className="radial-tooltip">
-          <p className="text-sm font-light text-center">PRESS AND HOLD</p>
+          <p className="text-xs sm:text-sm font-light text-center">PRESS AND HOLD</p>
           <div className="radial-progress-bar">
             {showTooltip ? (<div
               className={`radial-progress-fill ${activeSegment === position ? 'w-full' : 'w-0'}`}
