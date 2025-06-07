@@ -37,10 +37,10 @@ export default function HeroSection() {
                 {/* Mobile Menu with animation */}
                 <div className={`overflow-hidden transition-all duration-300 ease-in-out md:hidden ${isOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0"}`}>
                     <ul className="flex flex-col gap-4 mt-4 text-sm font-medium">
-                        <li><a href="about" className="hover:text-gray-600">About</a></li>
-                        <li><a href="skills" className="hover:text-gray-600">Skills</a></li>
-                        <li><a href="projects" className="hover:text-gray-600">Projects</a></li>
-                        <li><a href="contact" className="hover:text-gray-600">Contact</a></li>
+                         <li><Link to="/about" className="hover:text-gray-600">About</Link></li>
+                        <li><Link to="/skills" className="hover:text-gray-600">Skills</Link></li>
+                        <li><Link to="/projects" className="hover:text-gray-600">Projects</Link></li>
+                        <li><Link to="/contact" className="hover:text-gray-600">Contact</Link></li>
                     </ul>
                 </div>
             </nav>
