@@ -2,6 +2,7 @@ import { FaDownload } from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 
 export default function HeroSection() {
@@ -19,10 +20,10 @@ export default function HeroSection() {
 
                     {/* Desktop Menu */}
                     <ul className="hidden md:flex gap-6 text-sm font-medium">
-                        <li><a href="about" className="hover:text-gray-600">About</a></li>
-                        <li><a href="skills" className="hover:text-gray-600">Skills</a></li>
-                        <li><a href="projects" className="hover:text-gray-600">Projects</a></li>
-                        <li><a href="contact" className="hover:text-gray-600">Contact</a></li>
+                        <li><Link to="/about" className="hover:text-gray-600">About</Link></li>
+                        <li><Link to="/skills" className="hover:text-gray-600">Skills</Link></li>
+                        <li><Link to="/projects" className="hover:text-gray-600">Projects</Link></li>
+                        <li><Link to="/contact" className="hover:text-gray-600">Contact</Link></li>
                     </ul>
 
                     {/* Mobile Icon */}

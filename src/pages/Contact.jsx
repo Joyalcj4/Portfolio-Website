@@ -3,8 +3,8 @@ import { FaTimes } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
 
-export default function Contact({com=false, onClose}) {
-    const navigate = useNavigate();
+export default function Contact({ com = false, onClose }) {
+  const navigate = useNavigate();
   return (
     <div className="min-h-screen px-6 py-16 text-black">
       <button
@@ -45,22 +45,23 @@ export default function Contact({com=false, onClose}) {
 function ContactItem({ icon, label, value, link }) {
   return (
     <div className="flex items-center space-x-4 text-left">
-      <div className="text-gray-800 text-xl">{icon}</div>
+      <div className="text-gray-800 text-base sm:text-xl">{icon}</div>
       <div>
-        <p className="text-sm text-slate-800">{label}</p>
+        <p className="text-xs sm:text-sm text-slate-800">{label}</p>
         {link ? (
           <a
             href={link}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-lg hover:text-slate-500 transition"
+            className="text-base sm:text-lg hover:text-slate-500 transition"
           >
             {value}
           </a>
         ) : (
-          <p className="text-lg ">{value}</p>
+          <p className="text-base sm:text-lg">{value}</p>
         )}
       </div>
     </div>
+
   );
 }

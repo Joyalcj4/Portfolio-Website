@@ -56,7 +56,7 @@ export default function Info({com=false,onClose}) {
 
         {/* Roadmap Section */}
         <div className="relative">
-          <div className="absolute top-1/2 left-0 w-full h-1 bg-black z-0"></div>
+          <div className="absolute top-1/2 left-0 w-full h-1 bg-black z-0 opacity-0 sm:opacity-100 md:opacity-100"></div>
           <div className="grid grid-cols-1 sm:grid-cols-4 gap-10 relative z-10">
             {steps.map((step, idx) => (
               <div key={idx} className="flex flex-col items-center text-center">

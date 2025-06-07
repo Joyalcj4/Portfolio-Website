@@ -54,7 +54,7 @@ const RadialMenu = ({ onSelect }) => {
   );
 
   return (
-    <div className="relative w-156 h-156 sm:w-102 sm:h-102 md:w-156 md:h-156 border rounded-full shadow-2xl flex items-center justify-center">
+    <div className="relative w-60 h-60 sm:w-102 sm:h-102 md:w-156 md:h-156 border rounded-full shadow-2xl flex items-center justify-center">
       {renderSegment('projects', 'Projects', 'top-0 left-0 rounded-tl-full origin-bottom-right','See my works')}
       {renderSegment('skills', 'Skills', 'top-0 right-0 rounded-tr-full origin-bottom-left','Always learning')}
       {renderSegment('about', 'About', 'bottom-0 left-0 rounded-bl-full origin-top-right','The story')}
