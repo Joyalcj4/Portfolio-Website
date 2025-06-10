@@ -3,6 +3,7 @@ import { FaGithub } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import gafferImg from '../assets/gaffer.png';
 import blogImg from  '../assets/blog.png'
+import interviewImg from '../assets/interview.png'
 import ScrollReveal from '../components/ScrollReveal';
 
 const projects = [
@@ -27,7 +28,7 @@ const projects = [
   {
     title: 'AI mock Interview website',
     description: 'Personalised mock interviews created by AI based on skills you have',
-    image: '/images/sudoku.jpg',
+    image: interviewImg,
     liveDemo: '',
     techStack: ['MongoDB', 'Express.js', 'React', 'Node.js'],
     tools: ['Postman'],
