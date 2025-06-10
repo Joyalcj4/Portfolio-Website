@@ -2,6 +2,7 @@ import { FaTimes } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import gafferImg from '../assets/gaffer.png';
+import blogImg from  '../assets/blog.png'
 import ScrollReveal from '../components/ScrollReveal';
 
 const projects = [
@@ -17,7 +18,7 @@ const projects = [
   {
     title: 'Personal Blog Website',
     description: 'Personal Blog website with every features needed built with MERN Stack :(for website testing - USER: admin, PASSWORD: admin )',
-    image: '/images/sudoku.jpg',
+    image: blogImg,
     liveDemo: 'https://personal-blog-mern-project.vercel.app/',
     techStack: ['MongoDB', 'Express.js', 'React', 'Node.js'],
     tools: ['Postman'],
