@@ -110,12 +110,12 @@ const ProjectsPage = ({ com = false}) => {
                       href={project.liveDemo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-1 inline-flex items-center justify-center border-2 border-black px-6 py-3 rounded-full text-sm font-medium hover:bg-black hover:text-white transition-all duration-300"
+                      className="w-full sm:w-1/2 inline-flex items-center justify-center border-2 border-black px-4 sm:px-6 py-3 rounded-full text-sm font-medium hover:bg-black hover:text-white transition-all duration-300"
                     >
                       Live Demo
                     </a>
                   ) : (
-                    <span className="flex-1 inline-flex items-center justify-center bg-black/5 border border-black/20 text-slate-600 px-6 py-3 rounded-full text-sm">
+                    <span className="w-full sm:w-1/2 inline-flex items-center justify-center bg-black/5 border border-black/20 text-slate-600 px-4 sm:px-6 py-3 rounded-full text-sm">
                       Live Demo Coming Soon
                     </span>
                   )}
@@ -124,7 +124,7 @@ const ProjectsPage = ({ com = false}) => {
                     href={project.Git}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 inline-flex items-center justify-center gap-2 border-2 border-black px-6 py-3 rounded-full text-sm font-medium hover:bg-black hover:text-white transition-all duration-300"
+                    className="w-full sm:w-1/2 inline-flex items-center justify-center gap-2 border-2 border-black px-4 sm:px-6 py-3 rounded-full text-sm font-medium hover:bg-black hover:text-white transition-all duration-300"
                   >
                     Github <FaGithub />
                   </a>
