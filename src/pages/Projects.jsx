@@ -2,6 +2,7 @@ import { FaTimes } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import gafferImg from '../assets/gaffer.png';
+import ScrollReveal from '../components/ScrollReveal';
 
 const projects = [
   {
@@ -15,9 +16,9 @@ const projects = [
   },
   {
     title: 'Personal Blog Website',
-    description: 'Personal Blog website with every features needed built with MERN Stack',
+    description: 'Personal Blog website with every features needed built with MERN Stack(Admin Only- for website testing - username: admin, password: admin )',
     image: '/images/sudoku.jpg',
-    liveDemo: '',
+    liveDemo: 'https://personal-blog-mern-project.vercel.app/',
     techStack: ['MongoDB', 'Express.js', 'React', 'Node.js'],
     tools: ['Postman'],
     Git: 'https://github.com/Joyalcj4/Personal-Blog-mern-project'
@@ -33,81 +34,115 @@ const projects = [
   },
 ];
 
-const ProjectsPage = ({ com = false, onClose }) => {
+const ProjectsPage = ({ com = false}) => {
   const navigate = useNavigate();
-  return (
-    <div className="min-h-screen px-6 py-16 text-black relative">
-      <button
-        onClick={() => com ? onClose() : navigate('/')}
 
-        className="absolute top-6 right-6 text-black hover:text-red-500 transition text-2xl z-50"
-        aria-label="Close"
+  return (
+    <div className="min-h-screen px-6 py-16 text-black relative custom-gradient">
+      {!com && <ScrollReveal
+        direction="left"
+        distance={30}
+        duration={0.4}
       >
-        <FaTimes />
-      </button>
+        <button
+          onClick={() => navigate('/')}
+          className="absolute top-6 right-6 text-black hover:text-red-500 transition text-2xl z-50"
+          aria-label="Close"
+        >
+          <FaTimes />
+        </button>
+      </ScrollReveal>}
 
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-4xl font-bold text-center mb-12 textcolor">Projects</h1>
+        <ScrollReveal
+          direction="up"
+          distance={30}
+          duration={0.5}
+        >
+          <h1 className="text-5xl md:text-6xl font-bold tracking-tight text-center mb-12">
+            Here are some of my <span className=" outline-text font-extrabold">Projects</span>
+          </h1>
+        </ScrollReveal>
 
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, i) => (
-            <div
+            <ScrollReveal
               key={i}
-              className="bg-gray-50 p-6 rounded-xl border border-white/10 shadow-md hover:shadow-xl transition duration-300"
+              direction="up"
+              distance={40}
+              duration={0.6}
+              delay={i * 0.1}
             >
-              <div
-                className="h-40 bg-cover bg-center rounded-lg mb-4"
-                style={{ backgroundImage: `url(${project.image})` }}
-              />
+              <div className="bg-[#ffffff0a] backdrop-blur-sm p-8 rounded-xl border border-black/10 shadow-lg hover:shadow-2xl hover:scale-103 transition-all duration-300 h-[600px] flex flex-col group">
+                <div
+                  className="h-48 bg-cover bg-center rounded-lg mb-6 overflow-hidden transform group-hover:scale-105 transition-transform duration-300"
+                  style={{ backgroundImage: `url(${project.image})` }}
+                />
 
-              <h2 className="text-2xl font-semibold mb-2">{project.title}</h2>
-              <p className="secondcolor mb-4">{project.description}</p>
+                <h2 className="text-2xl font-bold mb-3 text-slate-600 group-hover:text-black transition-colors">{project.title}</h2>
+                <p className="text-gray-600 mb-6 flex-grow">{project.description}</p>
 
-              <div className="mb-3">
-                <h4 className="text-sm font-semibold textcolor mb-1">Stack:</h4>
-                <ul className="text-sm secondcolor list-disc list-inside pl-4">
-                  {project.techStack.map((tech, idx) => (
-                    <li key={idx}>{tech}</li>
-                  ))}
-                </ul>
+                <div className="mb-4">
+                  <h4 className="text-sm font-semibold text-slate-800 mb-2">Stack:</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {project.techStack.map((tech, idx) => (
+                      <span key={idx} className="px-3 py-1 bg-black/5 rounded-full text-sm text-slate-700">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="mb-6">
+                  <h4 className="text-sm font-semibold text-slate-800 mb-2">Tools:</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {project.tools.map((tool, idx) => (
+                      <span key={idx} className="px-3 py-1 bg-black/5 rounded-full text-sm text-slate-700">
+                        {tool}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="flex gap-3 mt-auto">
+                  {project.liveDemo ? (
+                    <a
+                      href={project.liveDemo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 inline-flex items-center justify-center border-2 border-black px-6 py-3 rounded-full text-sm font-medium hover:bg-black hover:text-white transition-all duration-300"
+                    >
+                      Live Demo
+                    </a>
+                  ) : (
+                    <span className="flex-1 inline-flex items-center justify-center bg-black/5 border border-black/20 text-slate-600 px-6 py-3 rounded-full text-sm">
+                      Live Demo Coming Soon
+                    </span>
+                  )}
+
+                  <a
+                    href={project.Git}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 inline-flex items-center justify-center gap-2 border-2 border-black px-6 py-3 rounded-full text-sm font-medium hover:bg-black hover:text-white transition-all duration-300"
+                  >
+                    Github <FaGithub />
+                  </a>
+                </div>
               </div>
-
-              <div className="mb-4">
-                <h4 className="text-sm font-semibold textcolor mb-1">Tools:</h4>
-                <ul className="text-sm secondcolor list-disc list-inside pl-4">
-                  {project.tools.map((tool, idx) => (
-                    <li key={idx}>{tool}</li>
-                  ))}
-                </ul>
-              </div>
-
-              {project.liveDemo ? (
-                <a
-                  href={project.liveDemo}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block bg-gray-50 border hover:bg-black hover:text-amber-50 transition px-4 py-2 rounded-full text-sm mt-2"
-                >
-                  Live Demo
-                </a>
-              ) : (
-                <span className="inline-block bg-gray-200 border border-gray-400 text-gray-600 px-4 py-2 rounded-full text-sm mt-2">
-                  Live Demo Coming Soon
-                </span>
-              )}
-
-              <a
-                href={project.liveDemo}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex gap-2 bg-gray-50 border hover:bg-black hover:text-amber-50 transition px-4 py-2 rounded-full text-sm ml-5 mt-2"
-              >
-                Github <FaGithub />
-              </a>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
-        <p className="text-center mt-6">Note: The projects displayed are my most impactful. Other smaller works are intentionally left out.</p>
+        <ScrollReveal
+          direction="up"
+          distance={20}
+          duration={0.5}
+          delay={0.3}
+        >
+          <p className="text-center mt-12 text-gray-600">
+            Note: The projects displayed are my most impactful. Other smaller works are intentionally left out.
+          </p>
+        </ScrollReveal>
       </div>
     </div>
   );
