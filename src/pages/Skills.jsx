@@ -24,7 +24,7 @@ export default function Skills({com=false, onClose}) {
       category: "Backend",
       items: [
         { name: "Node.js", icon: <FaNodeJs className="text-green-500 text-3xl" /> },
-        { name: "Express.js", icon: <SiExpress className="text-gray-300 text-3xl" /> },
+        { name: "Express.js", icon: <SiExpress className="text-green-500 text-3xl" /> },
         { name: "MongoDB", icon: <SiMongodb className="text-green-400 text-3xl" /> },
         { name: "Mongoose", icon: <SiMongoose className="text-red-400 text-3xl" /> },
       ],
@@ -33,7 +33,7 @@ export default function Skills({com=false, onClose}) {
       category: "Other",
       items: [
         { name: "Git", icon: <FaGitAlt className="text-orange-500 text-3xl" /> },
-        { name: "GitHub", icon: <FaGithub className="text-white text-3xl" /> },
+        { name: "GitHub", icon: <FaGithub className="text-black text-3xl" /> },
         { name: "REST APIs", icon: <SiApollographql className="text-pink-400 text-3xl" /> },
         { name: "VS Code", icon: <DiVisualstudio className="text-blue-400 text-3xl" /> },
         { name: "Postman", icon: <SiPostman className="text-orange-400 text-3xl" /> },

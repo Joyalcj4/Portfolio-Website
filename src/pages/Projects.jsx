@@ -16,7 +16,7 @@ const projects = [
   },
   {
     title: 'Personal Blog Website',
-    description: 'Personal Blog website with every features needed built with MERN Stack(Admin Only- for website testing - username: admin, password: admin )',
+    description: 'Personal Blog website with every features needed built with MERN Stack :(for website testing - USER: admin, PASSWORD: admin )',
     image: '/images/sudoku.jpg',
     liveDemo: 'https://personal-blog-mern-project.vercel.app/',
     techStack: ['MongoDB', 'Express.js', 'React', 'Node.js'],
