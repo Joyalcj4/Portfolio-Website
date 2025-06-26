@@ -2,9 +2,10 @@ import { FaTimes } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import gafferImg from '../assets/gaffer.png';
-import blogImg from  '../assets/blog.png'
+import blogImg from '../assets/blog.png'
 import interviewImg from '../assets/interview.png'
 import ScrollReveal from '../components/ScrollReveal';
+import galleryImg from '../assets/gallery.png'
 
 const projects = [
   {
@@ -34,9 +35,18 @@ const projects = [
     tools: ['Postman'],
     Git: 'https://github.com/Joyalcj4/AI-mock-interview-website'
   },
+  {
+    title: 'Image Gallery App',
+    description: 'A mobile image gallery app that fetches and caches recent photos from Flickr API. It provides a smooth browsing experience with offline support using image caching.',
+    image: galleryImg,
+    liveDemo: 'https://drive.google.com/file/d/1jSejnpvhDEhXuw7v9CtcU6Od60S16JKP/view?usp=sharing',
+    techStack: ['React Native', 'Expo', 'Flickr API'],
+    tools: ['AsyncStorage', 'Postman'],
+    Git: 'https://github.com/Joyalcj4/React-Native-image-Gallery-mobile-app'
+  },
 ];
 
-const ProjectsPage = ({ com = false}) => {
+const ProjectsPage = ({ com = false }) => {
   const navigate = useNavigate();
 
   return (
@@ -77,7 +87,7 @@ const ProjectsPage = ({ com = false}) => {
             >
               <div className="bg-[#ffffff0a] backdrop-blur-sm p-8 rounded-xl border border-black/10 shadow-lg hover:shadow-2xl hover:scale-103 transition-all duration-300 h-[600px] flex flex-col group">
                 <div
-                  className="h-48 bg-cover bg-center rounded-lg mb-6 overflow-hidden transform group-hover:scale-105 transition-transform duration-300"
+                  className="h-200 bg-cover bg-center rounded-lg mb-6 overflow-hidden transform group-hover:scale-105 transition-transform duration-300"
                   style={{ backgroundImage: `url(${project.image})` }}
                 />
 
